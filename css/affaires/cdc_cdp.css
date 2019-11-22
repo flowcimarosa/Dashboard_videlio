@@ -1,0 +1,122 @@
+/******************************** BootStrap Element ******************************/
+/********************************************************************************/
+button span {
+  color: white;
+}
+
+#hourstoProduct {
+  color: #d51366 !important;
+}
+
+#hoursProducted {
+  color: #d51366 !important;
+}
+
+#DossiersTraites {
+  color: #d51366 !important;
+}
+
+.cardTitle {
+  font-weight: bold !important;
+  text-transform: uppercase;
+}
+
+.btn.btn-secondary {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: calc(10% + 0.5vw + 0.5vh);
+  border: none;
+  background-color: #d51366;
+  color: white !important;
+}
+
+/*********************************************************************************/
+/****************************** Fin BootStrap Element ****************************/
+
+/************************************** Tables **********************************/
+/********************************************************************************/
+tfoot input {
+  width: 100%;
+}
+
+.open {
+  color: #d51366;
+  font-weight: bold;
+}
+
+.closed {
+  color: green;
+  font-weight: bold;
+}
+
+/*************** Table *******************/
+
+table.dataTable tbody td:nth-child(1) {
+  width: 7% !important;
+  max-width: 7% !important;
+  min-width: 7% !important;
+}
+
+table.dataTable tbody td:nth-child(2) {
+  width: 20% !important;
+  max-width: 20% !important;
+  min-width: 20% !important;
+  font-weight: bold;
+  color: #63a3dc;
+}
+
+table.dataTable tbody td:nth-child(3) {
+  width: 4% !important;
+  max-width: 4% !important;
+  min-width: 4% !important;
+  text-align: center !important;
+}
+
+table.dataTable tbody td:nth-child(4) {
+  width: 18% !important;
+  max-width: 18% !important;
+  min-width: 18% !important;
+}
+
+table.dataTable tbody td:nth-child(5) {
+  width: 18% !important;
+  max-width: 18% !important;
+  min-width: 18% !important;
+}
+
+table.dataTable tbody td:nth-child(6) {
+  width: 17% !important;
+  max-width: 17% !important;
+  min-width: 17% !important;
+}
+
+table.dataTable tbody td:nth-child(7) {
+  width: 4% !important;
+  max-width: 4% !important;
+  min-width: 4% !important;
+  text-align: center !important;
+  font-weight: bold;
+}
+table.dataTable tbody td:nth-child(8) {
+  width: 4% !important;
+  max-width: 4% !important;
+  min-width: 4% !important;
+  text-align: center !important;
+  font-weight: bold;
+}
+
+table.dataTable tbody td:nth-child(9) {
+  width: 4% !important;
+  max-width: 4% !important;
+  min-width: 4% !important;
+  text-align: center !important;
+  font-weight: bold;
+}
+
+table.dataTable tbody td:nth-child(10) {
+  width: 4% !important;
+  max-width: 4% !important;
+  min-width: 4% !important;
+  text-align: center !important;
+  font-weight: bold;
+}

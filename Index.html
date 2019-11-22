@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link rel="icon" href="./favicon.ico" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="UTF-8">
+      <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+      <meta http-equiv="Pragma" content="no-cache" />
+      <meta http-equiv="Expires" content="0" />
+      <!-- libs -->
+      <link type="text/css" rel="stylesheet" href="./css/libs/bootstrap.min.css">
+      <link type="text/css" rel="stylesheet" href="./css/libs/bootstrap-grid.min.css">
+      <link type="text/css" rel="stylesheet" href="./css/libs/bootstrap-reboot.min.css">
+      <link type="text/css" rel="stylesheet" href="./css/libs/bootstrap-select-1.13.9.min.css">
+      <!-- Custom Css -->
+      <link type="text/css" rel="stylesheet" href="./css/common.css">
+      <link type="text/css" rel="stylesheet" href="./css/index.css">
+
+      <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-3">
+          <div class="panel">
+            <div class="panel-heading">
+                <h5 class="panel-title">Dossiers en cours</h5>
+            </div>
+              <div class="panel-body table-responsive">
+                    <table class="table table-striped">
+                <thead>
+                  <tr class="">
+                    <th class="text-left">Capitale</th>
+                    <th class="text-right">Retard</th>
+                    <th class="text-right">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-left fit">Autre</td>
+                    <td class="text-right"><a id="totalRetardAutres"></a></td>
+                    <td class="text-right"><a id="totalAutres"></a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left fit">Gennevilliers</td>
+                    <td class="text-right"><a id="totalRetardGennevilliers"></a></td>
+                    <td class="text-right"><a id="totalGennevilliers"></a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left fit">Lyon</td>
+                    <td class="text-right"><a id="totalRetardLyon"></a></td>
+                    <td class="text-right"><a id="totalLyon"></a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">Marseille</td>
+                    <td class="text-right"><a id="totalRetardMarseille"></a></td>
+                    <td class="text-right"><a id="totalMarseille"></a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left fit">Rennes</td>
+                    <td class="text-right"><a id="totalRetardRennes"></a></td>
+                    <td class="text-right"><a id="totalRennes"></a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left fit">Scenotechnique</td>
+                    <td class="text-right"><a id="totalRetardScenotechnique"></a></td>
+                    <td class="text-right"><a id="totalScenotechnique"></a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left fit">Strasbourg</td>
+                    <td class="text-right"><a id="totalRetardStrasbourg"></a></td>
+                    <td class="text-right"><a id="totalStrasbourg"></a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left fit">Toulouse</td>
+                    <td class="text-right"><a id="totalRetardToulouse"></a></td>
+                    <td class="text-right"><a id="totalToulouse"></a></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th class="text-left fit">Total</th>
+                    <th id="totalRetardDossier" class="text-right font-weight-bold"></th>
+                    <th id="totalDossier" class="text-right font-weight-bold"></th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-heading">
+                <h5 class="panel-title"id="totalTickets">Tickets en cours : </h5>
+            </div>
+              <div class="panel-body table-responsive">
+                    <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <td class="text-left fit">Incidents</td>
+                    <td class="text-right"><a id="totalIncidents"></a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left fit">Critiques</td>
+                    <td class="text-right"><a id="totalCritiques"></a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left fit">RMA</td>
+                    <td class="text-right"><a id="totalRMA"></a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">Devis</td>
+                    <td class="text-right"><a id="totalDevis"></a></td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-left fit">Préparation</td>
+                    <td class="text-right"><a id="totalPrepa"></a></td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <header>
+            <h1>Dashboard</h1>
+          </header>
+          <div class="row">
+            <div class="col-sm cardGroup"><a>Affaires</a></div>
+          </div>
+          <div class="row">
+            <div class="card card-margin col-sm text-white bg-secondary">
+              <h5 class="card-title">National</h5>
+              <div class="row">
+                <a onclick="addUrlNational(this)" href="html/affaires/atelier_en_cours.html" class="btn btn-secondary col">Atelier</a>
+                <a onclick="addUrlNational(this)" href="html/affaires/doe_en_cours.html"  class="btn btn-secondary col">DOE</a>
+              </div>
+              <div class="row">
+              <a onclick="addUrlNational(this)" href="html/affaires/etude_en_cours.html" class="btn btn-secondary col">Etude</a>
+              <a onclick="addUrlNational(this)" href="html/affaires/prog_en_cours.html" class="btn btn-secondary col">Prog</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlNational(this)" href="html/affaires/affaires_en_cours.html" class="btn btn-secondary col">Affaires en Cours</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlNational(this)" href="html/affaires/prod_effectuee.html" class="btn btn-secondary col">Prod <br> Finie</a>
+                <a onclick="addUrlNational(this)" href="html/affaires/prod_en_cours.html" class="btn btn-secondary col">Prod <br> En Cours</a>
+              </div>
+              <div class="row last-row">
+                <a onclick="addUrlNational(this)" href="html/affaires/cdc_cdp.html" class="btn btn-secondary col">CDC - CDP</a>
+                <a href="html/affaires/commerciaux.html" class="btn btn-secondary col">Com</a>
+              </div>
+            </div>
+            <div class="card card-margin col-sm text-white bg-secondary">
+              <h5 class="card-title">
+                  <select id='affCR' class='selectpicker selectAffCapitale col' data-live-search="true" title="Capitale ou BU" data-size="8"></select>
+              </h5>
+              <div class="row">
+                <a onclick="addUrlCR(this)" href="html/affaires/atelier_en_cours.html" class="btn-affCapitale disabled btn btn-secondary col">Atelier</a>
+                <a onclick="addUrlCR(this)" href="html/affaires/doe_en_cours.html" class="btn-affCapitale btn disabled btn-secondary col">DOE</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlCR(this)" href="html/affaires/etude_en_cours.html" class="btn-affCapitale btn disabled btn-secondary col">Etude</a>
+                <a onclick="addUrlCR(this)" href="html/affaires/prog_en_cours.html" class="btn-affCapitale btn disabled btn-secondary col">Prog</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlCR(this)" href="html/affaires/affaires_en_cours.html" class="btn-affCapitale btn  disabled btn-secondary col">Affaires en Cours</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlCR(this)" href="html/affaires/prod_effectuee.html" class="btn-affCapitale btn disabled btn-secondary col">Prod <br> Finie</a>
+                <a onclick="addUrlCR(this)" href="html/affaires/prod_en_cours.html" class="btn-affCapitale btn disabled btn-secondary col">Prod <br> En Cours</a>
+              </div>
+              <div class="row last-row">
+                <a onclick="addUrlCR(this)" href="html/affaires/Commercial.html" class="btn-affCapitale btn disabled btn-secondary col">Commerciaux</a>
+              </div>
+            </div>
+            <div class="card card-margin col-sm text-white bg-secondary">
+              <h5 class="card-title">
+                <select id='affClient' class='selectpicker selectAffClient col' data-live-search="true" title="Client" data-size="8"></select>
+              </h5>
+              <div class="row">
+                <a onclick="addUrlClient(this)" href="html/affaires/atelier_en_cours.html" class="btn-affClient disabled btn btn-secondary col">Atelier</a>
+                <a onclick="addUrlClient(this)" href="html/affaires/doe_en_cours.html" class="btn-affClient disabled btn btn-secondary col">DOE</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlClient(this)" href="html/affaires/etude_en_cours.html" class="btn-affClient disabled btn btn-secondary col">Etude</a>
+                <a onclick="addUrlClient(this)" href="html/affaires/prog_en_cours.html" class="btn-affClient disabled btn btn-secondary col">Prog</a>
+              </div>
+              <div class="row last-row">
+                <a onclick="addUrlClient(this)" href="html/affaires/affaires_en_cours.html" class="btn-affClient disabled btn btn-secondary col">Affaires en Cours</a>
+              </div>
+            </div>
+            <div class="card card-margin col-sm text-white bg-secondary">
+              <h5 class="card-title">
+                <select id='affCom' class='selectpicker selectAffCom col' data-live-search="true" title="Commercial" data-size="8"></select>
+              </h5>
+              <div class="row">
+                <a onclick="addUrlCom(this)" href="html/affaires/atelier_en_cours.html" class="btn-affCom disabled btn btn-secondary col">Atelier</a>
+                <a onclick="addUrlCom(this)" href="html/affaires/doe_en_cours.html" class="btn-affCom disabled btn btn-secondary col">DOE</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlCom(this)" href="html/affaires/etude_en_cours.html" class="btn-affCom disabled btn btn-secondary col">Etude</a>
+                <a onclick="addUrlCom(this)" href="html/affaires/prog_en_cours.html" class="btn-affCom disabled btn btn-secondary col">Prog</a>
+              </div>
+              <div class="row last-row">
+                <a onclick="addUrlCom(this)" href="html/affaires/affaires_en_cours.html" class="btn-affCom btn  disabled btn-secondary col">Affaires en Cours</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm cardGroup"><a>Services</a></div>
+          </div>
+          <div class="row">
+            <div class="card card-margin col-sm text-white bg-secondary">
+              <h5 class="card-title">Général</h5>
+              <div class="row">
+                <a onclick="addUrlServiceNational(this)" href="html/services/incidents_en_cours.html" class="btn btn-secondary col">Incidents</a>
+                <a onclick="addUrlServiceNational(this)" href="html/services/preparation_en_cours.html" class="btn btn-secondary col">Prépa</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlServiceNational(this)" href="html/services/stats_tickets.html" class="btn btn-secondary col">Stats Tickets</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlServiceNational(this)" href="html/services/type_tickets.html" class="btn btn-secondary col">Type Tickets</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlServiceNational(this)" href="html/services/top_20_clotures.html" class="btn btn-secondary col">TOP 20 Cloturés</a>
+              </div>
+              <div class="row last-row">
+                <a onclick="addUrlServiceNational(this)" href="html/services/stats_conciergerie.html"  class="btn btn-secondary col">Conciergerie</a>
+              </div>
+            </div>
+            <div class="card card-margin col-sm text-white bg-secondary">
+              <h5 class="card-title">
+                  <select id='serviceRegion' class='selectpicker selectServiceRegion col' data-live-search="true" title="Région" data-size="8"></select>
+              </h5>
+              <div class="row">
+                <a onclick="addUrlServiceRegion(this)" href="html/services/tickets_en_cours.html" class="btn-serviceRegion disabled btn btn-secondary col">Tickets en cours</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlServiceRegion(this)" href="html/services/rma_en_cours.html" class="btn-serviceRegion disabled btn btn-secondary col">RMA</a>
+                <a onclick="addUrlServiceRegion(this)" href="html/services/devis_en_cours.html" class="btn-serviceRegion disabled btn btn-secondary col">Devis</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlServiceRegion(this)" href="html/services/incidents_en_cours.html" class="btn-serviceRegion disabled btn btn-secondary col">Incidents</a>
+                <a onclick="addUrlServiceRegion(this)" href="html/services/preparation_en_cours.html" class="btn-serviceRegion disabled btn btn-secondary col">Prépa</a>
+              </div>
+              <div class="row last-row">
+                <a onclick="addUrlServiceRegion(this)" href="html/services/stats_tickets.html" class="btn-serviceRegion disabled btn btn-secondary col">Stats Tickets</a>
+              </div>
+            </div>
+            <div class="card card-margin col-sm text-white bg-secondary">
+              <h5 class="card-title">
+                    <select id='serviceClient' class='selectpicker selectServiceClient col' data-live-search="true" title="Client" data-size="8"></select>
+              </h5>
+              <div class="row">
+                <a onclick="addUrlServiceClient(this)" href="html/services/tickets_en_cours.html" class="btn-serviceClient disabled btn btn-secondary col">Tickets en cours</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlServiceClient(this)" href="html/services/rma_en_cours.html" class="btn-serviceClient disabled btn btn-secondary col">RMA</a>
+                <a onclick="addUrlServiceClient(this)" href="html/services/devis_en_cours.html" class="btn-serviceClient disabled btn btn-secondary col">Devis</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlServiceClient(this)" href="html/services/incidents_en_cours.html" class="btn-serviceClient disabled btn btn-secondary col">Incidents</a>
+                <a onclick="addUrlServiceClient(this)" href="html/services/preparation_en_cours.html" class="btn-serviceClient disabled btn btn-secondary col">Prépa</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlServiceClient(this)" href="html/salesforce/DemandeDeService.html" class="btn-serviceClient disabled btn btn-secondary col">Demande de service</a>
+              </div>
+              <div class="row last-row">
+                <a onclick="addUrlServiceClient(this)" href="html/services/stats_tickets.html" class="btn-serviceClient disabled btn btn-secondary col">Stats Tickets</a>
+              </div>
+            </div>
+            <div class="card card-margin col-sm text-white bg-secondary">
+              <h5 class="card-title">
+                    <select id='serviceOwner' class='selectpicker selectServiceOwner col' data-live-search="true" title="Intervenant" data-size="8"></select>
+              </h5>
+              <div class="row">
+                <a onclick="addUrlServiceOwner(this)" href="html/services/tickets_en_cours.html" class="btn-serviceOwner disabled btn btn-secondary col">Tickets en cours</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlServiceOwner(this)" href="html/services/rma_en_cours.html" class="btn-serviceOwner disabled btn btn-secondary col">RMA</a>
+                <a onclick="addUrlServiceOwner(this)" href="html/services/devis_en_cours.html" class="btn-serviceOwner disabled btn btn-secondary col">Devis</a>
+              </div>
+              <div class="row">
+                <a onclick="addUrlServiceOwner(this)" href="html/services/incidents_en_cours.html" class="btn-serviceOwner disabled btn btn-secondary col">Incidents</a>
+                <a onclick="addUrlServiceOwner(this)" href="html/services/preparation_en_cours.html" class="btn-serviceOwner disabled btn btn-secondary col">Prépa</a>
+              </div>
+              <div class="row last-row">
+                <a onclick="addUrlServiceOwner(this)" href="html/services/stats_tickets.html" class="btn-serviceOwner disabled btn btn-secondary col">Stats Tickets</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-sm cardGroup"><a>Ressources</a></div>
+          </div>
+          <div class="row">
+            <div class="card card-margin col-sm text-white bg-secondary">
+              <h5 class="card-title">Général</h5>
+              <div class="row">
+                <a onclick="addUrlNational(this)" href="html/ressources/formations_liste.html" class="btn btn-secondary col">Historique Formation</a>
+             <!--   <a onclick="addUrlNational(this)" href="html/affaires/doe_en_cours.html"  class="btn btn-secondary col">DOE</a>-->
+              </div>
+            <!--  <div class="row last-row">
+              <a onclick="addUrlNational(this)" href="html/affaires/etude_en_cours.html" class="btn btn-secondary col">Etude</a>
+              <a onclick="addUrlNational(this)" href="html/affaires/prog_en_cours.html" class="btn btn-secondary col">Prog</a>
+              </div> -->
+            </div>
+            <div class="card card-margin col-sm card text-white bg-secondary">
+           <!--   <h5 class="card-title">
+                    <select id='affCR' class='selectpicker selectAffCapitale col' data-live-search="true" title="Capitale ou BU" data-size="8"></select>
+              </h5>
+              <div class="row">
+                <a onclick="addUrlCR(this)" href="html/affaires/atelier_en_cours.html" class="btn-affCapitale disabled btn btn-secondary col">Atelier</a>
+                <a onclick="addUrlCR(this)" href="html/affaires/doe_en_cours.html" class="btn-affCapitale btn disabled btn-secondary col">DOE</a>
+              </div>
+              <div class="row last-row">
+                <a onclick="addUrlCR(this)" href="html/affaires/etude_en_cours.html" class="btn-affCapitale btn disabled btn-secondary col">Etude</a>
+                <a onclick="addUrlCR(this)" href="html/affaires/prog_en_cours.html" class="btn-affCapitale btn disabled btn-secondary col">Prog</a>
+              </div>-->
+            </div>
+            <div class="card card-margin col-sm card text-white bg-secondary">
+          <!--  <h5 class="card-title">
+                <select id='affClient' class='selectpicker selectAffClient col' data-live-search="true" title="Groupe" data-size="8"></select>
+                </h5>
+              <div class="row">
+                <a onclick="addUrlClient(this)" href="html/affaires/atelier_en_cours.html" class="btn-affClient disabled btn btn-secondary col">Atelier</a>
+                <a onclick="addUrlClient(this)" href="html/affaires/doe_en_cours.html" class="btn-affClient disabled btn btn-secondary col">DOE</a>
+              </div>
+              <div class="row last-row">
+                <a onclick="addUrlClient(this)" href="html/affaires/etude_en_cours.html" class="btn-affClient disabled btn btn-secondary col">Etude</a>
+                <a onclick="addUrlClient(this)" href="html/affaires/prog_en_cours.html" class="btn-affClient disabled btn btn-secondary col">Prog</a>
+              </div> -->
+            </div>
+            <div class="card card-margin col-sm card text-white bg-secondary">
+             <!--<h5 class="card-title">
+                <select id='affCom' class='selectpicker selectAffCom col' data-live-search="true" title="Commercial" data-size="8"></select>
+             </h5>
+              <div class="row">
+                <a onclick="addUrlCom(this)" href="html/affaires/atelier_en_cours.html" class="btn-affCom disabled btn btn-secondary col">Atelier</a>
+                <a onclick="addUrlCom(this)" href="html/affaires/doe_en_cours.html" class="btn-affCom disabled btn btn-secondary col">DOE</a>
+              </div>
+              <div class="row last-row">
+                <a onclick="addUrlCom(this)" href="html/affaires/etude_en_cours.html" class="btn-affCom disabled btn btn-secondary col">Etude</a>
+                <a onclick="addUrlCom(this)" href="html/affaires/prog_en_cours.html" class="btn-affCom disabled btn btn-secondary col">Prog</a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- libs -->
+    <script type="text/javascript" src="./js/libs/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./js/libs/popper.min.js"></script>
+    <script type="text/javascript" src="./js/libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/libs/bootstrap-select-1.13.10.min.js"></script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>

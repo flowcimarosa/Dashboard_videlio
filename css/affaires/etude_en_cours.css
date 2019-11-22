@@ -1,0 +1,67 @@
+/************************************** Datatable *******************************/
+/********************************************************************************/
+
+/*************** Table *******************/
+
+table.dataTable tbody td:nth-child(1) {
+  width: 7% !important;
+  max-width: 7% !important;
+  min-width: 7% !important;
+}
+
+table.dataTable tbody td:nth-child(2) {
+  width: 7% !important;
+  max-width: 7% !important;
+  min-width: 7% !important;
+  font-weight: bold;
+  color: #63a3dc;
+}
+
+table.dataTable tbody td:nth-child(3) {
+  width: 22% !important;
+  max-width: 22% !important;
+  min-width: 22% !important;
+  color: #63a3dc;
+  text-align: left !important;
+}
+
+table.dataTable tbody td:nth-child(4) {
+  width: 23% !important;
+  max-width: 23% !important;
+  min-width: 23% !important;
+  color: #63a3dc;
+  text-align: left !important;
+}
+
+table.dataTable tbody td:nth-child(5) {
+  width: 12% !important;
+  max-width: 12% !important;
+  min-width: 12% !important;
+}
+
+table.dataTable tbody td:nth-child(6) {
+  width: 3% !important;
+  max-width: 3% !important;
+  min-width: 3% !important;
+}
+
+table.dataTable tbody td:nth-child(7) {
+  width: 12% !important;
+  max-width: 12% !important;
+  min-width: 12% !important;
+}
+
+table.dataTable tbody td:nth-child(8) {
+  width: 12% !important;
+  max-width: 12% !important;
+  min-width: 12% !important;
+}
+
+table.dataTable tbody td:nth-child(9) {
+  width: 2% !important;
+  max-width: 2% !important;
+  min-width: 2% !important;
+}
+
+/********************************************************************************/
+/************************************ Fin Datatable *****************************/

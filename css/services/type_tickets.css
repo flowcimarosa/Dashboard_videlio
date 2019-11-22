@@ -1,0 +1,11 @@
+div.card {
+  text-align: center;
+}
+
+div.card-title h3 {
+  font-size: calc(10% + 1vw + 1vh);
+}
+.bandeau.gauche {
+  margin: 1% 0;
+  font-size: calc(10% + 1vw + 1vh) !important;
+}

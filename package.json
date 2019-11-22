@@ -1,0 +1,33 @@
+{
+  "name": "dashboard-videlio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab:mlafois/videlio_dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-jquery": "^2.0.0",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "eslint-plugin-prettier": "^3.1.0"
+  }
+}

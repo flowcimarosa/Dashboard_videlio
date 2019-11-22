@@ -1,0 +1,9 @@
+div.card {
+  margin: 0 2% 2% 2%;
+  text-align: center;
+  font-size: calc(10% + 1vw + 1vh);
+}
+
+div.card-title h3 {
+  font-size: calc(10% + 1vw + 1vh);
+}

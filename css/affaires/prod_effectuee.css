@@ -1,0 +1,61 @@
+/******************************** BootStrap Element ******************************/
+/********************************************************************************/
+
+.cardTitle {
+  font-weight: bold !important;
+  text-transform: uppercase;
+}
+
+div.topFirst {
+  margin-top: 0.5%;
+  margin-left: 0.5%;
+}
+
+div.topFirst div.col-xl-6 div.card {
+  margin-bottom: 2%;
+}
+
+/*********************************************************************************/
+/****************************** Fin BootStrap Element ****************************/
+
+/************************************** Tables **********************************/
+/********************************************************************************/
+
+/*************** Table : Délai Moyen Cloture ****************/
+
+table#DelaiMoy {
+  font-size: 1.2em;
+}
+
+table#DelaiMoy tbody tr td:last-child {
+  font-size: 1.6em;
+  color: #d51366;
+  font-weight: bold;
+}
+
+/*************** Table : Dossiers Cloturés *******************/
+
+table#DossiersCloture {
+  font-size: 1.2em;
+}
+
+table#DossiersCloture tbody tr td:last-child {
+  font-size: 1.6em;
+  color: #d51366;
+  font-weight: bold;
+}
+
+/*************** Table : Heures Produites *******************/
+
+table#heuresProduites {
+  font-size: 1.2em;
+}
+
+table#heuresProduites tbody tr td:last-child {
+  font-size: 1.6em;
+  color: #d51366;
+  font-weight: bold;
+}
+
+/********************************************************************************/
+/************************************* Fin Tables *******************************/

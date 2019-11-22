@@ -1,0 +1,97 @@
+/******************** Titre *****************************/
+
+header h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  padding: 0%;
+  color: #d51366;
+}
+
+/******************** Panel *****************************/
+
+.panel {
+  margin-top: 4%;
+  color: white;
+  background-color: #6c757d;
+}
+
+.panel-title {
+  margin-top: 0.2%;
+}
+/******************** Card *****************************/
+div.card {
+  margin: 0 2% 2% 2%;
+  text-align: center;
+}
+.card-margin {
+  margin-top: 0.5% !important;
+  margin-bottom: 0.5% !important;
+}
+
+.last-row {
+  margin-bottom: 3% !important;
+}
+
+div.card .row {
+  margin: 0% 0.5% 0.5% 0.5%;
+}
+
+.cardGroup {
+  font-size: calc(30% + 0.5vw + 0.5vh);
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: #d51366;
+  border-color: #6c757d;
+  border-width: 4px;
+  margin: 0 1% 0 1%;
+}
+
+h5.card-title {
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-top: 2%;
+}
+
+h5.panel-title {
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.card-title {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+/******************** Bouttons *****************************/
+
+a.btn.btn-secondary.col {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: calc(10% + 0.5vw + 0.5vh);
+}
+
+a.btn.btn-secondary {
+  border: none;
+  background-color: #d51366;
+  margin: 1% 0.5% 0 0.5%;
+}
+
+/******************** Table *****************************/
+
+table.table {
+  padding: 0;
+}
+
+table.table tbody tr td {
+}
+
+table.table thead tr th {
+  background-color: #d51366;
+}
+table.table tfoot tr th {
+  background-color: #d51366;
+}

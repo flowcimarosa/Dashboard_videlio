@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- libs -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/libs/bootstrap.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/libs/bootstrap-grid.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/libs/bootstrap-reboot.min.css"
+    />
+
+    <!-- Custom Css -->
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/affaires/prod_en_cours.css"
+    />
+
+    <title></title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row justify-content-between">
+        <div class="col-2">
+          <div class="bandeau gauche">
+            <a id="gaucheTexte"></a>
+            <span id="EnCours"></span>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="row justify-content-center">
+            <div class="bandeau centre">
+              <a id="pageTitle"></a><a id="groupTitle"></a>
+              <span id="filterTitle"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="row justify-content-end mr-1">
+            <div class="bandeau droite">
+              <a id="droiteTexte"></a>
+              <span id="EnRetard"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-6">
+          <div class="card mb-2">
+            <div class="card-header">
+              <h2 class="card-title">
+                <a>A Clôturer dans le mois : </a><span id="ACloture"></span>
+              </h2>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title">
+                <a>Date de cloture en retard : </a
+                ><span id="DateClotureRetard"></span>
+              </h2>
+            </div>
+              <div class="card-body">
+              <table class="table table-striped col-xl-12" id="heuresProduites">
+                <thead>
+                  <th>Service</th>
+                  <th class="text-center">En retard</th>
+                  <th>En cours</th>
+                  <th class="text-right">Total</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Etude</td>
+                    <td id="EtudeRetard"></td>
+                    <td id="EtudeEnCours"></td>
+                    <td id="EtudeTotal" class="text-right"></td>
+                  </tr>
+                  <tr>
+                    <td>Atelier</td>
+                    <td id="AtelierRetard"></td>
+                    <td id="AtelierEnCours"></td>
+                    <td id="AtelierTotal" class="text-right"></td>
+                  </tr>
+                  <tr>
+                    <td>Programmation</td>
+                    <td id="ProgRetard"></td>
+                    <td id="ProgEnCours"></td>
+                    <td id="ProgTotal" class="text-right"></td>
+                  </tr>
+                  <tr>
+                    <td>Doe</td>
+                    <td id="DoeRetard"></td>
+                    <td id="DoeEnCours"></td>
+                    <td id="DoeTotal" class="text-right"></td>
+                  </tr>
+                  <tr>
+                    <td>Formation</td>
+                    <td id="FormationRetard"></td>
+                    <td id="FormationEnCours"></td>
+                    <td id="FormationTotal" class="text-right"></td>
+                  </tr>
+                  <tr>
+                    <td>Mecanique</td>
+                    <td id="MecaRetard"></td>
+                    <td id="MecaEnCours"></td>
+                    <td id="MecaTotal" class="text-right"></td>
+                  </tr>
+                  <tr>
+                    <td>Integration</td>
+                    <td id="IntegrationRetard"></td>
+                    <td id="IntegrationEnCours"></td>
+                    <td id="IntegrationTotal" class="text-right"></td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+
+          </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="badge enRetard float-right">
+                  <a>En Retard</a>
+                </h3>
+                <h3 class="badge enCours float-right mr-2">
+                  <a>En cours</a>
+                </h3>
+                <h2 class="card-title">Affaires En Cours</h2>
+              </div>
+              <div class="card-body row justify-content-center">
+                <div class="col-xl-8">
+                  <h3 class="text-center">
+                    <a>Total PLD :</a>
+                    <span id="EnCoursPld"></span>
+                  </h3>
+                  <canvas class="" id="retardPld"></canvas>
+                </div>
+              </div>
+              <div class="card-body row justify-content-center">
+                <div class="col-xl-8">
+                  <h3 class="text-center">
+                    <a>Total PCD :</a> <span id="EnCoursPcd"></span>
+                  </h3>
+                  <canvas class="" id="retardPcd"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom row ml-auto">
+      <div class="ml-auto mr-3 dateDiv">
+        <a></a>
+      </div>
+    </div>
+
+    <!-- libs -->
+    <script
+      type="application/javascript"
+      src="../../js/libs/jquery-3.4.1.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="../../js/libs/Chart-2.8.0.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="../../js/libs/plugin_chartjs-1.1.0.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="../../js/libs/chartjs-plugin-doughnutlabel.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="../../js/libs/chartjs-plugin-style.min-0.5.0.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="../../js/libs/moment-2.2.4.0.min.js"
+    ></script>
+
+    <!-- Custom JS -->
+    <script
+      type="application/javascript"
+      src="../../js/affaires/prod_en_cours.js"
+    ></script>
+  </body>
+</html>

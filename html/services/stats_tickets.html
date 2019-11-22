@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- libs -->
+    <link rel="stylesheet" href="../../css/libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/libs/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="../../css/libs/bootstrap-reboot.min.css" />
+
+    <!-- Custom Css -->
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/services/stats_tickets.css" />
+
+    <title></title>
+  </head>
+  <body>
+    <div class="container-fluid h-100">
+      <div class="row justify-content-between">
+        <div class="col-3">
+          <div class="bandeau gauche">
+            <a id="gaucheTexte"></a>
+            <span id="EnCours"></span>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row justify-content-center">
+            <div class="bandeau centre">
+              <a id="pageTitle"></a><a id="groupTitle"></a>
+              <span id="filterTitle"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="row justify-content-end mr-1">
+            <div class="bandeau droite">
+              <a id="droiteTexte"></a>
+              <span id="EnRetard"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card col-xl-6">
+          <div>
+            <h3 class="card-title row justify-content-center">
+              Tickets Clôturés
+            </h3>
+          </div>
+          <div class="card-body row">
+            <canvas class="col-xl-12" id="TicketsClotures"></canvas>
+          </div>
+          <div class="card-body row justify-content-center">
+            <p>
+              <button
+                onclick="showTicketbyYear(2015)"
+                class="btn btn-secondary unClicked"
+                id="2015Tickets"
+              >2015</button>
+              <button
+                onclick="showTicketbyYear(2016)"
+                class="btn btn-secondary unClicked"
+                id="2016Tickets"
+              >2016</button>
+              <button
+                onclick="showTicketbyYear(2017)"
+                class="btn btn-secondary unClicked"
+                id="2017Tickets"
+              >2017</button>
+              <button
+                onclick="showTicketbyYear(2018)"
+                class="btn btn-secondary unClicked"
+                id="2018Tickets"
+              > 2018</button>
+              <button
+                onclick="showTicketbyYear(2019)"
+                class="btn btn-secondary unclicked"
+                id="2019Tickets"
+              >
+                2019
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="card col-xl-6">
+          <div>
+            <h3 class="card-title row justify-content-center">
+              GTR (Jours Calendaires)
+            </h3>
+          </div>
+          <div class="card-body row">
+            <canvas class="col-xl-12" id="gtrchart"></canvas>
+          </div>
+          <div class="card-body row justify-content-center">
+            <p>
+              <button
+                onclick="showGtrbyYear(2015)"
+                class="btn btn-secondary unClicked"
+                id="2015GTR"
+              >
+                2015
+              </button>
+              <button
+                onclick="showGtrbyYear(2016)"
+                class="btn btn-secondary unClicked"
+                id="2016GTR"
+              >
+                2016
+              </button>
+              <button
+                onclick="showGtrbyYear(2017)"
+                class="btn btn-secondary unClicked"
+                id="2017GTR"
+              >
+                2017
+              </button>
+              <button
+                onclick="showGtrbyYear(2018)"
+                class="btn btn-secondary unClicked"
+                id="2018GTR"
+              >
+                2018
+              </button>
+              <button
+                onclick="showGtrbyYear(2019)"
+                class="btn btn-secondary unClicked"
+                id="2019GTR"
+              >
+                2019
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card col-xl-6">
+          <div>
+            <h3 class="card-title row justify-content-center">
+              Historique - Tickets
+            </h3>
+          </div>
+          <div class="card-body row justify-content-center">
+            <table class='table'>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th><button id="histoTickets2015" class="btn btn-secondary Histo">2015</button></th>
+                  <th><button id="histoTickets2016" class="btn btn-secondary Histo">2016</button></th>
+                  <th><button id="histoTickets2017" class="btn btn-secondary Histo">2017</button></th>
+                  <th><button id="histoTickets2018" class="btn btn-secondary Histo">2018</button></th>
+                  <th><button id="histoTickets2019" class="btn btn-secondary Histo">2019</button></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Total (Période ISO)</td>
+                  <td id='totalTickets2015'></td>
+                  <td id='totalTickets2016'></td>
+                  <td id='totalTickets2017'></td>
+                  <td id='totalTickets2018'></td>
+                  <td id='totalTickets2019'></td>
+                </tr>
+                <tr>
+                  <td>Moyenne (Période ISO)</td>
+                  <td id='moyenneTickets2015'></td>
+                  <td id='moyenneTickets2016'></td>
+                  <td id='moyenneTickets2017'></td>
+                  <td id='moyenneTickets2018'></td>
+                  <td id='moyenneTickets2019'></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card col-xl-6">
+          <div>
+            <h3 class="card-title row justify-content-center">
+              Historique - GTR
+            </h3>
+          </div>
+          <div class="card-body row justify-content-center">
+            <table class='table'>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th><button id="histoGtr2015" class="btn btn-secondary Histo">2015</button></th>
+                  <th><button id="histoGtr2016" class="btn btn-secondary Histo">2016</button></th>
+                  <th><button id="histoGtr2017" class="btn btn-secondary Histo">2017</button></th>
+                  <th><button id="histoGtr2018" class="btn btn-secondary Histo">2018</button></th>
+                  <th><button id="histoGtr2019" class="btn btn-secondary Histo">2019</button></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Moyenne</td>
+                  <td id='moyenneGtr2015'></td>
+                  <td id='moyenneGtr2016'></td>
+                  <td id='moyenneGtr2017'></td>
+                  <td id='moyenneGtr2018'></td>
+                  <td id='moyenneGtr2019'></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom row ml-auto">
+      <div class="ml-auto mr-3 dateDiv">
+        <a></a>
+      </div>
+    </div>
+    <!-- libs -->
+    <script src="../../js/libs/jquery-3.4.1.min.js"></script>
+    <script src="../../js/libs/Chart-2.8.0.min.js"></script>
+    <script scr="../../js/libs/chartjs-plugin-datalabels-0.6.0.min.js"></script>
+    <script src="../../js/libs/chartjs-plugin-doughnutlabel.min.js"></script>
+    <script src="../../js/libs/chartjs-plugin-style.min-0.5.0.js"></script>
+    <script
+      type="application/javascript"
+      src="../../js/libs/moment-2.2.4.0.min.js"
+    ></script>
+
+    <!-- Custom JS -->
+    <script src="../../js/services/stats_tickets.js"></script>
+  </tbody>
+</html>

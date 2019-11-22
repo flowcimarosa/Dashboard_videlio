@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- libs -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/libs/bootstrap.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/libs/bootstrap-grid.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/libs/bootstrap-reboot.min.css"
+    />
+
+    <!-- Custom Css -->
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/affaires/prod_effectuee.css"
+    />
+
+  <title></title>
+  </head>
+  <body>
+    <div class="container-fluid h-100">
+      <div class="row justify-content-between">
+        <div class="col-3">
+          <div class="bandeau gauche">
+            <a id="gaucheTexte"></a>
+            <span id="EnCours"></span>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row justify-content-center">
+            <div class="bandeau centre">
+              <a id="pageTitle"></a><a id="groupTitle"></a>
+              <span id="filterTitle"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="row justify-content-end mr-1">
+            <div class="bandeau droite">
+              <a id="droiteTexte"></a>
+              <span id="EnRetard"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+          <div class="row topFirst">
+            <div class="col-xl-6">
+              <div class="row">
+                <div class="card col-xl-12">
+                  <div class="card-body row">
+                    <div class="card-body col-xl-5">
+                      <div class="d-inline-blocks">
+                        <h3 class="cardTitle">Nombre de projets clôturés</h3>
+                      </div>
+                    </div>
+                    <table
+                      class="table table-striped col-xl-7"
+                      id="DossiersCloture"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>Total :</td>
+                          <td id="Cloture" class="text-right"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="card col-xl-12">
+                  <div class="card-body row">
+                    <div class="card-body col-xl-5">
+                      <div class="d-inline-blocks">
+                        <h3 class="cardTitle">
+                          Délai Moyen Clôturé (jours ouvrés)
+                        </h3>
+                      </div>
+                    </div>
+                    <table class="table table-striped col-xl-7" id="DelaiMoy">
+                      <tbody>
+                        <tr>
+                          <td>PCD :</td>
+                          <td id="DelaiPcd" class="text-right"></td>
+                        </tr>
+                        <tr>
+                          <td>PLD :</td>
+                          <td id="DelaiPld" class="text-right"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div id="ratioTP" class="card col-xl-12">
+                  <div class="card-body row">
+                    <div class="card-body col-xl-4">
+                      <div class="d-inline-blocks">
+                        <h3 class="cardTitle">Ratio TP</h3>
+                      </div>
+                    </div>
+                    <canvas
+                      class="col-xl-8"
+                      style="width: 20%;"
+                      id="tptotal"
+                    ></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="row">
+                <div class="col-xl-12">
+                  <div class="card">
+                    <div class="card-body row">
+                      <div class="card-body col-xl-12">
+                        <h3 class="cardTitle">Heures produites Interne</h3>
+                      </div>
+                    </div>
+                    <div class="card-body row">
+                      <table
+                        class="table table-striped col-xl-11 offset-xl-1"
+                        id="heuresProduites"
+                      >
+                        <tbody>
+                          <tr>
+                            <td>Total :</td>
+                            <td id="nbHeuresTotal" class="text-right"></td>
+                          </tr>
+                          <tr>
+                            <td id="txtnbHeuresDev">Avant-Vente</td>
+                            <td id="nbHeuresDev" class="text-right"></td>
+                          </tr>
+                          <tr>
+                            <td id="txtnbHeuresCv">Affaires</td>
+                            <td id="nbHeuresCv" class="text-right"></td>
+                          </tr>
+                          <tr>
+                            <td id="txtnbHeuresCma">Contrat de Maintenance</td>
+                            <td id="nbHeuresCma" class="text-right"></td>
+                          </tr>
+                          <tr>
+                            <td id="txtnbHeuresSav">SAV</td>
+                            <td id="nbHeuresSav" class="text-right"></td>
+                          </tr>
+                          <tr>
+                            <td id="txtnbHeuresDPE">Délégation</td>
+                            <td id="nbHeuresDPE" class="text-right"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom row ml-auto">
+      <div class="ml-auto mr-3 dateDiv">
+        <a></a>
+      </div>
+    </div>
+
+    <!-- libs -->
+    <script
+      type="application/javascript"
+      src="../../js/libs/jquery-3.4.1.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="../../js/libs/Chart-2.8.0.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="../../js/libs/plugin_chartjs-1.1.0.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="../../js/libs/chartjs-plugin-doughnutlabel.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="../../js/libs/chartjs-plugin-style.min-0.5.0.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="../../js/libs/moment-2.2.4.0.min.js"
+    ></script>
+
+    <!-- Custom JS -->
+    <script
+      type="application/javascript"
+      src="../../js/affaires/prod_effectuee.js"
+    ></script>
+  </body>
+</html>

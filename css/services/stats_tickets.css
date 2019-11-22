@@ -1,0 +1,7 @@
+.table tbody td {
+  font-weight: bold;
+  text-align: center !important;
+}
+.table thead th {
+  text-align: center !important;
+}

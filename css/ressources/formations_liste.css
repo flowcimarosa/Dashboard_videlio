@@ -1,0 +1,137 @@
+/******************************** BootStrap Element ******************************/
+/********************************************************************************/
+button span {
+  color: white;
+}
+
+.btn.btn-secondary {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: calc(10% + 0.5vw + 0.5vh);
+  border: none;
+  background-color: #d51366;
+  color: white !important;
+}
+
+/*********************************************************************************/
+/****************************** Fin BootStrap Element ****************************/
+
+/************************************** Tables **********************************/
+/********************************************************************************/
+tfoot input {
+  width: 100%;
+}
+#periodNumberSession {
+  color: #d51366 !important;
+}
+
+#periodNumberHours {
+  color: #d51366 !important;
+}
+
+#periodNumberCertification {
+  color: #d51366 !important;
+}
+/*************** Table *******************/
+
+table.dataTable tbody td:nth-child(1) {
+  width: 20% !important;
+  max-width: 20% !important;
+  min-width: 20% !important;
+  text-align: left !important;
+  font-weight: bold;
+  color: #63a3dc;
+}
+
+table.dataTable tbody td:nth-child(2) {
+  width: 20% !important;
+  max-width: 20% !important;
+  min-width: 20% !important;
+  text-align: left !important;
+}
+
+table.dataTable tbody td:nth-child(3) {
+  width: 20% !important;
+  max-width: 20% !important;
+  min-width: 20% !important;
+  text-align: left !important;
+}
+
+table.dataTable tbody td:nth-child(4) {
+  width: 3% !important;
+  max-width: 3% !important;
+  min-width: 3% !important;
+  text-align: center !important;
+  font-weight: bold;
+}
+
+table.dataTable tbody td:nth-child(5) {
+  width: 3% !important;
+  max-width: 3% !important;
+  min-width: 3% !important;
+  text-align: center !important;
+  font-weight: bold;
+}
+
+table.dataTable tbody td:nth-child(6) {
+  width: 3% !important;
+  max-width: 3% !important;
+  min-width: 3% !important;
+  text-align: center !important;
+  font-weight: bold;
+}
+
+table.dataTable tbody td:nth-child(7) {
+  width: 3% !important;
+  max-width: 3% !important;
+  min-width: 3% !important;
+  text-align: center !important;
+  font-weight: bold;
+}
+table.dataTable tbody td:nth-child(8) {
+  width: 3% !important;
+  max-width: 3% !important;
+  min-width: 3% !important;
+  text-align: center !important;
+  font-weight: bold;
+}
+
+table.dataTable tbody td:nth-child(9) {
+  width: 3% !important;
+  max-width: 3% !important;
+  min-width: 3% !important;
+  text-align: center !important;
+  font-weight: bold;
+}
+
+table.dataTable tbody td:nth-child(10) {
+  width: 3% !important;
+  max-width: 3% !important;
+  min-width: 3% !important;
+  text-align: center !important;
+  font-weight: bold;
+}
+
+table.dataTable tbody td:nth-child(11) {
+  width: 3% !important;
+  max-width: 3% !important;
+  min-width: 3% !important;
+  text-align: center !important;
+  font-weight: bold;
+}
+
+table.dataTable tbody td:nth-child(12) {
+  width: 3% !important;
+  max-width: 3% !important;
+  min-width: 3% !important;
+  text-align: center !important;
+  font-weight: bold;
+}
+
+table.dataTable tbody td:nth-child(13) {
+  width: 3% !important;
+  max-width: 3% !important;
+  min-width: 3% !important;
+  text-align: center !important;
+  font-weight: bold;
+}

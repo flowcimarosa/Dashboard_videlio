@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- libs -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/libs/bootstrap.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/libs/bootstrap-grid.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/libs/bootstrap-reboot.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/libs/bootstrap-select-1.13.9.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/libs/dataTables.bootstrap.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/libs/dataTables.buttons.bootstrap4.min.css"
+    />
+
+    <!-- Custom Css -->
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/affaires/cdc_cdp.css"
+    />
+
+    <title></title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row justify-content-between">
+        <div class="col-4">
+          <div>
+            <select
+              id="list"
+              class="selectpicker selectUser"
+              data-live-search="true"
+              title="CDP ou CDC"
+              data-style="btn btn-secondary mt-2"
+              data-size="8"
+            ></select>
+            <button
+              onclick="getProjectsbyCdp(userSelected)"
+              class="btn-getProjects btn btn-secondary mt-2"
+            >
+              Valider
+            </button>
+            <button
+              onclick=""
+              class="btn-getProjects btn  mt-2"
+            >
+              Dossiers : <span id="DossiersTraites"></span>
+            </button>
+
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="row justify-content-center">
+            <div class="bandeau centre">
+              <a id="pageTitle"></a><a id="groupTitle"></a>
+              <span id="filterTitle"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="row justify-content-end mr-1">
+              <button
+              onclick=""
+              class="btn mt-2"
+            >
+              A Produire (H) : <span id="hourstoProduct"></span>
+              </button>
+              <button
+              onclick=""
+              class="btn mt-2 ml-1"
+            >
+              Produit (H) : <span id="hoursProducted"></span>
+              </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card col-6">
+            <h3 class="cardTitle text-center">Chef de Projet</h3>
+            <table class="table table-striped col-xl-12" id="CdpTableau">
+              <col>
+              <colgroup span="3"></colgroup>
+              <colgroup span="3"></colgroup>
+                <tr>
+                  <td rowspan="2"></td>
+                  <th colspan="3" scope="colgroup" class="open text-center">En cours</th>
+                  <th colspan="3" scope="colgroup" class="closed text-center">Cloturés</th>
+                </tr>
+                <tr>
+                  <th scope="col">Dossiers</th>
+                  <th scope="col">Produit (H)</th>
+                  <th scope="col">A produire (H)</th>
+                  <th scope="col">Dossiers</th>
+                  <th scope="col">Produit (H)</th>
+                </tr>
+                <tr>
+                  <th scope="row">PCD :</th>
+                  <td id="cdpPcdNumberOpen" class="open text-center"></td>
+                  <td id="cdpPcdProduitOpen" class="open text-center"></td>
+                  <td id="cdpPcdAproduireOpen" class="open text-center"></td>
+                  <td id="cdpPcdNumberClosed" class="closed text-center"></td>
+                  <td id="cdpPcdProduitClosed" class="closed text-center"></td>
+                </tr>
+                <tr>
+                  <th scope="row">PLD :</th>
+                  <td id="cdpPldNumberOpen" class="open text-center"></td>
+                  <td id="cdpPldProduitOpen" class="open text-center"></td>
+                  <td id="cdpPldAproduireOpen" class="open text-center"></td>
+                  <td id="cdpPldNumberClosed" class="closed text-center"></td>
+                  <td id="cdpPldProduitClosed" class="closed text-center"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Total :</th>
+                  <td id="cdpTotalNumberOpen" class="open text-center"></td>
+                  <td id="cdpTotalProduitOpen" class="open text-center"></td>
+                  <td id="cdpTotalAproduireOpen" class="open text-center"></td>
+                  <td id="cdpTotalNumberClosed" class="closed text-center"></td>
+                  <td id="cdpTotalProduitClosed" class="closed text-center"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="card col-6">
+                <h3 class="cardTitle text-center">Chef de Chantier</h3>
+                <table class="table table-striped col-xl-12" id="CdcTableau">
+                  <col>
+                  <colgroup span="3"></colgroup>
+                  <colgroup span="3"></colgroup>
+                    <tr>
+                      <td rowspan="2"></td>
+                      <th colspan="3" scope="colgroup" class="open text-center">En cours</th>
+                      <th colspan="3" scope="colgroup" class="closed text-center">Cloturés</th>
+                    </tr>
+                    <tr>
+                      <th scope="col">Dossiers</th>
+                      <th scope="col">Produit (H)</th>
+                      <th scope="col">A produire (H)</th>
+                      <th scope="col">Dossiers</th>
+                      <th scope="col">Produit (H)</th>
+                    </tr>
+                    <tr>
+                      <th scope="row">PCD :</th>
+                      <td id="cdcPcdNumberOpen" class="open text-center"></td>
+                      <td id="cdcPcdProduitOpen" class="open text-center"></td>
+                      <td id="cdcPcdAproduireOpen" class="open text-center"></td>
+                      <td id="cdcPcdNumberClosed" class="closed text-center"></td>
+                      <td id="cdcPcdProduitClosed" class="closed text-center"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">PLD :</th>
+                      <td id="cdcPldNumberOpen" class="open text-center"></td>
+                      <td id="cdcPldProduitOpen" class="open text-center"></td>
+                      <td id="cdcPldAproduireOpen" class="open text-center"></td>
+                      <td id="cdcPldNumberClosed" class="closed text-center"></td>
+                      <td id="cdcPldProduitClosed" class="closed text-center"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Total :</th>
+                      <td id="cdcTotalNumberOpen" class="open text-center"></td>
+                      <td id="cdcTotalProduitOpen" class="open text-center"></td>
+                      <td id="cdcTotalAproduireOpen" class="open text-center"></td>
+                      <td id="cdcTotalNumberClosed" class="closed text-center"></td>
+                      <td id="cdcTotalProduitClosed" class="closed text-center"></td>
+                    </tr>
+                </table>
+              </div>
+          </div>
+          <div class="row mt-1">
+            <table class="table table-striped table-bordered" id="table">
+              <thead>
+                <tr>
+                  <th>Cloturée</th>
+                  <th>CV</th>
+                  <th>Client</th>
+                  <th>Type</th>
+                  <th>CDP</th>
+                  <th>CDC</th>
+                  <th>Description</th>
+                  <th>Vendu (H)</th>
+                  <th>Passé (H)</th>
+                  <th>Reste (H)</th>
+                  <th>TP (%)</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  </tr>
+              </tfoot>
+            </table>
+          </div>
+    </div>
+  </body>
+<!--
+    <div class="bottom row ml-auto">
+      <div class="ml-auto mr-3 dateDiv">
+        <a></a>
+      </div>
+    </div>
+  -->
+    <!-- libs -->
+    <script
+      type="text/javascript"
+      src="../../js/libs/jquery-3.4.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../js/libs/dataTables.jszip.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../js/libs/dataTables.pdfmake.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../js/libs/dataTables.vfs_fonts.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="../../js/libs/dataTables-1.10.19.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../js/libs/dataTables.buttons.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../js/libs/dataTables.buttons.bootstrap4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../js/libs/dataTables.buttons.html5.min.js"
+    ></script>
+    <script type="text/javascript" src="../../js/libs/popper.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../../js/libs/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../js/libs/bootstrap-select-1.13.10.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="../../js/libs/moment-2.2.4.0.min.js"
+    ></script>
+
+    <!-- Custom JS -->
+    <script
+      type="application/javascript"
+      src="../../js/affaires/cdc_cdp.js"
+    ></script>
+  </body>
+</html>

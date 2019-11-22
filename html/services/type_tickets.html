@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- libs -->
+    <link rel="stylesheet" href="../../css/libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/libs/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="../../css/libs/bootstrap-reboot.min.css" />
+
+    <!-- Custom Css -->
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/services/type_tickets.css" />
+
+    <title></title>
+  </head>
+  <body>
+    <canvas class="container-fluid h-100">
+      <div class="row justify-content-between">
+        <div class="col-4">
+          <div class="bandeau gauche">
+            <a id="gaucheTexte"></a>
+            <span id="EnCours"></span>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row justify-content-center">
+            <div class="bandeau centre">
+              <a id="pageTitle"></a><a id="groupTitle"></a>
+              <span id="filterTitle"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="row justify-content-end mr-1">
+            <div class="bandeau droite">
+              <a id="droiteTexte"></a>
+              <span id="EnRetard"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <canvas class="row">
+        <canvas class="col-xl-12 ">
+          <canvas class="card">
+            <canvas class="card-body" style="position: relative; height:92vh;">
+              <canvas id="typeTickets"></canvas>
+            </canvas>
+          </canvas>
+        </canvas>
+      </canvas>
+    </canvas>
+    <div class="bottom row">
+      <div class="ml-auto mr-3 dateDiv">
+        <a></a>
+      </div>
+    </div>
+    <!-- libs -->
+    <script src="../../js/libs/jquery-3.4.1.min.js"></script>
+    <script src="../../js/libs/Chart-2.8.0.min.js"></script>
+    <script src="../../js/libs/chartjs-plugin-labels-1.1.0.min.js"></script>
+    <script src="../../js/libs/chartjs-plugin-style.min-0.5.0.js"></script>
+    <script
+      type="application/javascript"
+      src="../../js/libs/moment-2.2.4.0.min.js"
+    ></script>
+
+    <!-- Custom JS -->
+    <script src="../../js/services/type_tickets.js"></script>
+  </body>
+</html>
